@@ -4,7 +4,6 @@ var vidas = 1
 function ajustaTamanhoJogo() {
     altura = window.innerHeight
     largura = window.innerWidth
-    console.log(largura, altura)
 }
 ajustaTamanhoJogo()
 // console.log(altura, largura)
@@ -14,7 +13,7 @@ function posicaoRandomica() {
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
         if(vidas > 3 ){
-            alert('Interromper o jogo (game over)')
+            window.location.href = 'fim_de_jogo.html'
         }
         else{ 
         document.getElementById('v' + vidas).src = "img/coracao_vazio.png"
@@ -26,7 +25,6 @@ function posicaoRandomica() {
     posicaoX = posicaoX < 0 ? 0 : posicaoX
     posicaoY = posicaoY < 0 ? 0 : posicaoY
 
-    console.log(posicaoX, posicaoY)
 
     // Criar HTML
     var mosquito = document.createElement('img')
