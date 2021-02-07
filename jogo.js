@@ -8,6 +8,10 @@ nivel = nivel.replace('?', '')
 if (nivel === 'normal') {
     criarMosquitoTempo = 1500
 }
+else if (nivel === 'facil'){
+    criarMosquitoTempo = 2000
+    tempo = 10
+}
 else if (nivel === 'dificil') {
     criarMosquitoTempo = 1000
     tempo = 30
